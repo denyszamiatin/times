@@ -1,1 +1,2 @@
 # times
+scrapy crawl news
