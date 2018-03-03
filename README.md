@@ -1,2 +1,2 @@
 # times
-scrapy crawl news
+scrapy crawl news '''type in terminal for parsing JSON'''
