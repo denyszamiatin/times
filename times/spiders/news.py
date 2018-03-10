@@ -35,7 +35,6 @@ class TimesSpider(scrapy.Spider):
         yield Request(absolute_next_url,
                       callback=self.parse)
 
-
     def parse_article(self, response):
         url = response.meta.get('URL')
         title = response.meta.get('Title')
