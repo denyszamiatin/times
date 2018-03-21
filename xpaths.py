@@ -1,5 +1,6 @@
 import re
-import configparser
+import json
+
 
 URL_PATTERN = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
 
@@ -15,6 +16,9 @@ def extract_urls(text):
 
 start_urls = extract_urls(read_file("links.txt"))
 
-config = configparser.ConfigParser()
-config.read('xpath_query.ini')
-xpath = config.get('xpath_query', 'title')
+
+class XPaths:
+    def get_xpaths(self):
+        with open('sites.json', 'rt') as jfile:
+            xpaths = json.load(jfile)['Sites']
+            return xpaths

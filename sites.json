@@ -1,0 +1,26 @@
+{
+  "Sites": [
+    {
+      "domain": "24tv.ua",
+      "startURL": "https://24tv.ua/novini_tag1117/",
+      "articles": "//div[contains(@class, 'news-list')]/ul/li",
+      "title": "a/text()",
+      "URL": "a/@href",
+      "text": "//div[@class='article_text']//p[not(@id='mailchimpDescription')][not(@class='read-also cke-markup')]//text()",
+      "author": "//div[@class='tags']/span[@class='authors']/a/text()",
+      "date": "//time/span[@class='date']/text()",
+      "nextURL": "//link[@rel='next']/@href"
+    },
+    {
+      "domain": "ua.censor.net.ua",
+      "startURL": "https://ua.censor.net.ua/news/all",
+      "articles": "//article[contains(@class, 'item type')]/header/h3",
+      "title": "a/text()",
+      "URL": "a/@href",
+      "text": "//div[@class='text']//h2/text()|//p[not(@class='related-news')]//text()",
+      "author": "//div[@itemprop='author']/span[@itemprop='name']/text()",
+      "date": "//header/time[@class='published dateline']/text()",
+      "nextURL": "//link[@rel='next']/@href"
+    }
+  ]
+}
