@@ -4,6 +4,9 @@ from scrapy import Request
 from times.tools.config import Config
 
 
+__all__ = ['CensorNet', 'News24TVSpider']
+
+
 class BaseSpider(scrapy.Spider):
 
     def parse(self, response):
