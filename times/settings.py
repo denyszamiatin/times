@@ -28,6 +28,7 @@ FEED_URI = 'data/%(name)s/%(time)s.json'
 FEED_FORMAT = 'json'
 FEED_EXPORT_ENCODING = "utf-8"
 
+DEPTH_LIMIT = 3
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs

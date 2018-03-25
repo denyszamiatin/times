@@ -7,7 +7,7 @@ sites = config.get_sites()
 
 class TimesSpider(scrapy.Spider):
     name = 'news'
-    start_urls = [[site['startURL'] for site in sites][0]]
+    start_urls = [site['startURL'] for site in sites]
 
     def parse(self, response):
         for index, site in enumerate(sites):
@@ -23,12 +23,8 @@ class TimesSpider(scrapy.Spider):
                                   meta={'URL': absolute_url, 'Title': title.rstrip(), 'Site': site})
 
                 relative_next_url = response.xpath(site['nextURL']).extract_first()
-
-                if relative_next_url:
-                    absolute_next_url = response.urljoin(relative_next_url)
-                    yield scrapy.Request(absolute_next_url, callback=self.parse)
-                else:
-                    yield scrapy.Request(site[index + 1]['domain'], callback=self.parse)
+                absolute_next_url = response.urljoin(relative_next_url)
+                yield scrapy.Request(absolute_next_url, callback=self.parse)
 
     def parse_article(self, response):
         url = response.meta.get('URL')

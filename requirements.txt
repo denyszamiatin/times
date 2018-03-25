@@ -22,3 +22,5 @@ six==1.11.0
 Twisted==17.9.0
 w3lib==1.19.0
 zope.interface==4.4.3
+https://github.com/kmike/pymorphy2/archive/master.zip#egg=pymorphy2
+pymorphy2-dicts-uk==2.4.1.1.1460299261
