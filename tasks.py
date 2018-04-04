@@ -31,6 +31,3 @@ def process_articles():
     pipeline = NewsPipeLine(PIPES)
     preprocessor = NewsPreProcessor(pipeline, ARTICLES_GLOB_PATTERN)
     preprocessor.start()
-
-run_spiders()
-process_articles()

@@ -21,7 +21,6 @@ def remove_stop_words(text):
     for stop_word in stop_words:
         while stop_word in words:
             words.remove(stop_word)
-            print('removed %s' % stop_word)
     return ' '.join(words)
 
 
