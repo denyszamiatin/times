@@ -9,6 +9,8 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+DEBUG = True
+
 BOT_NAME = 'times'
 
 SPIDER_MODULES = ['times.spiders']
